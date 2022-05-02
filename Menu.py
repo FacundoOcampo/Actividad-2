@@ -18,15 +18,9 @@ class ClaseMenu:
 
     def opcion1(self,xReader,xListaV):
         for fila in xReader:
-            Num=int(fila[0])
-            Dni=int(fila[1])
-            Nom=fila[2]
-            Apell=fila[3]
-            Mill=int(fila[4])
-            NuevoViajero=ViajeroFrecuente(Num,Dni,Nom,Apell,Mill)
+            NuevoViajero=ViajeroFrecuente(fila)
             xListaV.append(NuevoViajero)
-        print("----------------------------------------------------------")
-        print("Cargado con exito")
+            print("----------------------------------------------------------")
 
     def opcion2(self,xListaV):
         xNum=int(input("Ingrese un numero de viajero"))

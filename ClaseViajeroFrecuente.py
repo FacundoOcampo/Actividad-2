@@ -4,12 +4,16 @@ class ViajeroFrecuente:
     __nombre=None
     __apellido=None
     __millas_acum=None
-    def __init__(self,num_viajero,dni,nombre,apellido,millas_acum):
-        self.__num_viajero=num_viajero
-        self.__dni=dni
-        self.__nombre=nombre
-        self.__apellido=apellido
-        self.__millas_acum=millas_acum
+    def __init__(self,fila):
+        if len(fila)==5:
+            self.__num_viajero=int(fila[0])
+            self.__dni=int(fila[1])
+            self.__nombre=str(fila[2])
+            self.__apellido=str(fila[3])
+            self.__millas_acum=int(fila[4])
+            print("Viajero cargado con exito")
+        else:
+            print("Error al crear Viajero")
     def CantidadTotalMillas(self):
         print("----------------------------------------------------------")
         print("La cantidad de millas acumulada es: {}".format(self.__millas_acum))
