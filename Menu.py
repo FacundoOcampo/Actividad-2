@@ -9,8 +9,6 @@ class ClaseMenu:
             self.opcion1(xReader,xListaV)
         elif Op== 2:
             self.opcion2(xListaV)
-        elif Op==3:
-            self.opcion3(xListaV)
         elif Op== 0:
             self.Salir()
         else:
@@ -51,10 +49,6 @@ class ClaseMenu:
 
         if b==False:
             print("No se encontro el viajero")
-    def opcion3(self,xListav):
-
-      for i in range(len(xListav)):
-          print("Direccion de memoria: {}\n     Datos almacenados: {}\n".format(hex(id(xListav[i])),xListav[i]))
 
     def Salir(self):
         print("Se salio con exito\n")

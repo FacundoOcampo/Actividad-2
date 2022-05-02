@@ -36,7 +36,5 @@ class ViajeroFrecuente:
         else:
             print("----------------------------------------------------------")
             print("Error")
-    def MostrarDatos(self):
-        print(self.__num_viajero,self.__dni,self.__nombre,self.__apellido,self.__millas_acum)
     def GetNum(self):
         return self.__num_viajero
