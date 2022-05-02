@@ -4,13 +4,13 @@ class ViajeroFrecuente:
     __nombre=None
     __apellido=None
     __millas_acum=None
-    def __init__(self,fila):
-        if len(fila)==5:
-            self.__num_viajero=int(fila[0])
-            self.__dni=int(fila[1])
-            self.__nombre=str(fila[2])
-            self.__apellido=str(fila[3])
-            self.__millas_acum=int(fila[4])
+    def __init__(self,Num,Dni,Nom,Apell,Millas):
+        if ((type(Num)==int)&(type(Dni)==int)&(type(Nom)==str)&(type(Apell)==str)&(type(Millas)==int)):
+            self.__num_viajero=Num
+            self.__dni=Dni
+            self.__nombre=Nom
+            self.__apellido=Apell
+            self.__millas_acum=Millas
             print("Viajero cargado con exito")
         else:
             print("Error al crear Viajero")

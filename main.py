@@ -5,22 +5,19 @@ from ClaseViajeroFrecuente import ViajeroFrecuente
 def Test():
     print("Datos correctos:")
     Fila=[]
-    print("     11,44061072,Francisco,Rojo,5")
-    Fila=[11,44061072,"Francisco","Rojo",5]
-    TestViajero=ViajeroFrecuente(Fila)
-    print("     43,99466788,Pedro,Romero,10 ")
-    Fila=[43,99466788,"Pedro","Romero",10]
-    TestViajero=ViajeroFrecuente(Fila)
-    print("     98,52987412,Flor,Ramirez,9")
-    Fila=[98,52987412,"Flor","Ramirez",9]
-    TestViajero=ViajeroFrecuente(Fila)
+    print('     11,44061072,"Francisco","Rojo",5')
+    TestViajero=ViajeroFrecuente(11,44061072,"Francisco","Rojo",5)
+    print('     43,99466788,"Pedro","Romero",10 ')
+    TestViajero=ViajeroFrecuente(43,99466788,"Pedro","Romero",10)
+    print('     98,52987412,"Flor","Ramirez",9')
+    TestViajero=ViajeroFrecuente(98,52987412,"Flor","Ramirez",9)
     print("\nDatos Incorrectos:")
-    print("     58963741,Ramiro,Fernadez,12")
-    Fila=[58963741,"Ramiro","Fernadez",12]
-    TestViajero=ViajeroFrecuente(Fila)
-    print("     89,45689963,45,Sofia,Cortez,12")
-    Fila=[ 89,45689963,45,"Sofia","Cortez",12]
-    TestViajero=ViajeroFrecuente(Fila)
+    print('     "1",58963741,"Ramiro","Fernadez",12 (El primer dato es de tipo string)')
+    TestViajero=ViajeroFrecuente("1",58963741,"Ramiro","Fernadez",12)
+    print('     "89","45689963","45","Sofia","Cortez",12 (Todo datos de tipo sting)')
+    TestViajero=ViajeroFrecuente("89","45689963","Sofia","Cortez","12")
+    print('     5,52896374,4554,33445,15 (Todos datos de tipo int)')
+    TestViajero=ViajeroFrecuente(5,52896374,4554,33445,15)
 
 
 if __name__ == '__main__':
