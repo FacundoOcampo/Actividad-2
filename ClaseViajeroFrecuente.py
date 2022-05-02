@@ -18,17 +18,21 @@ class ViajeroFrecuente:
         print("----------------------------------------------------------")
         print("La cantidad de millas acumulada es: {}".format(self.__millas_acum))
     def AcumularMillas(self,cant):
-        acum=self.__millas_acum+cant
-        self.__millas_acum=acum
-        print("----------------------------------------------------------")
-        print("La cantidad nueva de millas acumuladas es: ",acum)
-    def CanjearMillas(self,CantC):
-        if(CantC<=self.__millas_acum):
-            self.__millas_acum=self.__millas_acum-CantC
-            print("La cantidad nueva de millas acumuladas es:",self.__millas_acum)
-        elif(CantC>self.__millas_acum):
+        if(type(cant)==int):
+            acum=self.__millas_acum+cant
+            self.__millas_acum=acum
             print("----------------------------------------------------------")
-            print("La cantidad de millas a canjear es mayor a la acumulada")
+            print("La cantidad nueva de millas acumuladas es: ",acum)
+        else:
+            print("Error al ingresar la cantidad de millas a acumular")
+    def CanjearMillas(self,CantC):
+        if(type(CantC)==int):
+            if(CantC<=self.__millas_acum):
+                self.__millas_acum=self.__millas_acum-CantC
+                print("La cantidad nueva de millas acumuladas es:",self.__millas_acum)
+            else:
+                print("----------------------------------------------------------")
+                print("La cantidad de millas a canjear es mayor a la acumulada")
         else:
             print("----------------------------------------------------------")
             print("Error")
